@@ -84,9 +84,9 @@ will completely remove any data you have already stored in the database.
 
 ## Deploying onto Heroku
 * Check that the containers are working on the localhost.
-* Comment out ApiConfig function prior to deploy to prevent flush token error
+* Comment out [ApiConfig.ready()](https://github.com/WomenWhoCode/WWCode-SV/blob/master/api/wwcodesvtools/api/apps.py) function prior to deploy to prevent flush token error
 ```
-Comment out [ApiConfig](https://github.com/WomenWhoCode/WWCode-SV/blob/master/api/wwcodesvtools/api/apps.py)
+Comment out  ApiConfig.ready() in the apps.py file
 ```
 * Login to heroku
 ```
