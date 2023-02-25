@@ -1,4 +1,4 @@
-name: Django CI
+name: BE_PR_test.yml
 
 on:
   push:
