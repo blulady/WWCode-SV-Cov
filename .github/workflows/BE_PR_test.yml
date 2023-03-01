@@ -40,7 +40,7 @@ jobs:
         EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
         EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
         EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-        EMAIL_USER_TLS: ${{ secrets.EMAIL_USER_TLS }}
+        EMAIL_USE_TLS: ${{ secrets.EMAIL_USE_TLS }}
         FRONTEND_APP_URL: ${{ secrets.FRONTEND_APP_URL }}
         LOCAL_FRONTEND_ALLOWED: ${{ secrets.LOCAL_FRONTEND_ALLOWED }}
         POSTGRES_HOST_AUTH_METHOD: ${{ secrets.POSTGRES_HOST_AUTH_METHOD }}
