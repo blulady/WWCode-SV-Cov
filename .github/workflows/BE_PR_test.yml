@@ -26,5 +26,25 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Tests
+      env:
+        SECRET_KEY: ${{ secrets.DATABASE_HOST }}
+        DEBUG: ${{ secrets.DEBUG }}
+        DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+        DATABASE_USER: ${{ secrets.DATABASE_USER }}
+        DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD}}
+        DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
+        DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        EMAIL_BACKEND: ${{ secrets.EMAIL_BACKEND }}
+        EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+        EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
+        EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+        EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+        EMAIL_USER_TLS: ${{ secrets.EMAIL_USER_TLS }}
+        FRONTEND_APP_URL: ${{ secrets.FRONTEND_APP_URL }}
+        LOCAL_FRONTEND_ALLOWED: ${{ secrets.LOCAL_FRONTEND_ALLOWED }}
+        POSTGRES_HOST_AUTH_METHOD: ${{ secrets.POSTGRES_HOST_AUTH_METHOD }}
+        SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+
       run: |
         python manage.py test
