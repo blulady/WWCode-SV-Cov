@@ -47,4 +47,4 @@ jobs:
         SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
 
       run: |
-        python manage.py test
+        python api/wwcodesvtools/manage.py test
